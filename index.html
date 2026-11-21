@@ -1,132 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Manal Al-Razani — graphic designer and visual creative.">
-  <meta name="theme-color" content="#f4f0e8">
-  <title>MANAL AL-R-AZANI — Creative Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منال الرزاني — مصممة جرافيك</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1f4;--ink:#4a1f33;--muted:#8a5a6e;--matcha:#cfe0b8;--rose:#f6b1c6;--plum:#6b2d52;--line:rgba(74,31,51,.2);--card:#fff;--serif:"Cormorant Garamond",Georgia,serif;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1220;--ink:#ffe9ef;--muted:#d9aebf;--line:rgba(255,233,239,.22);--card:#3a1b2e;color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Jost","IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.6;font-size:17px}
+[dir=rtl] body{font-family:"IBM Plex Sans Arabic","Jost",sans-serif}
+[dir=rtl] .hero h1,[dir=rtl] h2,[dir=rtl] .tile .big,[dir=rtl] .logo,[dir=rtl] .svc li{font-family:"Amiri",serif}
+html[dir=rtl] .hero h1{font-size:clamp(3rem,9vw,6.5rem);line-height:1.35;max-width:14ch;font-weight:700;letter-spacing:0}
+html[dir=rtl] h2{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.4;font-weight:700;letter-spacing:0}
+html[dir=rtl] .tile .big{font-style:normal;font-weight:700;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.4;letter-spacing:0}
+html[dir=rtl] .logo{font-style:normal;font-size:1.5rem;font-weight:700}
+html[dir=rtl] .hero h1 .hl{font-style:normal}
+html[dir=rtl] .svc li{font-size:clamp(1.3rem,3vw,1.9rem);font-weight:700}
+html[dir=rtl] p,html[dir=rtl] .tile small{line-height:1.9}
+html[dir=rtl] .tools span,html[dir=rtl] .btn,html[dir=rtl] .links a{letter-spacing:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1180px;margin:0 auto}
+.logo{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.6rem;text-decoration:none}
+.links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.links a{text-decoration:none;font-size:.95rem}
+.links a:hover{text-decoration:underline;text-underline-offset:5px}
+.lang{border:1.5px solid var(--ink);background:none;color:var(--ink);border-radius:99px;padding:4px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+.hero{padding:72px 0 56px;position:relative;overflow:hidden}
+.hero h1{font-family:var(--serif);font-size:clamp(3.6rem,12vw,9.5rem);line-height:.95;letter-spacing:-.02em;margin:0;font-weight:500;max-width:10ch}
+[dir=rtl] .hero h1{letter-spacing:0;line-height:1.15}
+.hero h1 .hl{font-style:italic;color:#d6457f}
+.hero p{max-width:46ch;font-size:1.2rem;color:var(--muted);margin:28px 0 32px}
+.blob{position:absolute;inset-inline-end:24px;top:48px;width:clamp(150px,24vw,300px);aspect-ratio:3/4;border-radius:999px 999px 28px 28px;background:var(--rose);z-index:-1}
+.blob::after{content:"";position:absolute;inset:14px;border:2px solid rgba(255,255,255,.85);border-radius:999px 999px 18px 18px}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:14px 28px;border-radius:99px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--plum);color:#fff}
+.btn.alt{background:none;color:var(--ink);border:1.5px solid var(--ink);margin-inline-start:10px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.01em;line-height:1.05;margin:0 0 12px}
+.sub{color:var(--muted);max-width:52ch;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tile{border-radius:22px;padding:28px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;color:#4a1f33;border-radius:200px 200px 22px 22px}
+.tile .big{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(2.8rem,7vw,5.2rem);line-height:.95;text-align:center;padding-top:28px}
+[dir=rtl] .tile .big{letter-spacing:0;line-height:1.2}
+.tile h3{margin:0;font-size:1.1rem}
+.tile small{display:block;opacity:.8}
+.t1{background:var(--matcha)}
+.t2{background:#f9bfd0}
+.t3{background:#fde4b8}
+.t4{background:#d9c6f0;color:#3d2457}
+
+.t2 .rose{width:84px;height:84px;border-radius:50% 50% 50% 8%;background:#c2406a;align-self:flex-end}
+.t3 .slice{width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:120px solid #e0527a;align-self:flex-end}
+.t4 .ring{width:110px;height:110px;border-radius:50%;border:14px solid var(--matcha);align-self:flex-end}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+.about p{margin:0 0 18px;max-width:58ch}
+.svc{list-style:none;margin:0;padding:0}
+.svc li{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:600}
+.svc li span{color:var(--muted);font-weight:400;font-size:1rem;align-self:center;text-align:end}
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tools span{border:1.5px solid var(--ink);border-radius:99px;padding:7px 18px;font-size:.95rem}
+.contact{background:var(--plum);color:#fff1f4;border-radius:200px 200px 28px 28px;padding:90px 32px 56px;text-align:center}
+.contact h2{margin-inline:auto;max-width:14ch}
+.contact .btn{background:var(--rose);color:#4a1f33}
+.social{display:flex;gap:22px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+footer{padding:32px 0 40px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:760px){.grid,.about{grid-template-columns:1fr}.links .hide{display:none}.btn.alt{margin:12px 0 0}}
+
+</style>
 </head>
 <body>
-  <div class="announcement"><span class="pulse"></span><span data-en="AVAILABLE FOR SELECT PROJECTS" data-ar="متاحة لمشاريع تصميم مختارة">AVAILABLE FOR SELECT PROJECTS</span><span class="announcement-right">PALESTINE · 2026</span></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Manal home">MANAL<span>®</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#work" data-en="WORK" data-ar="الأعمال">WORK</a>
-      <a href="#about" data-en="ABOUT" data-ar="عني">ABOUT</a>
-      <a href="#services" data-en="SERVICES" data-ar="الخدمات">SERVICES</a>
-      <a href="#contact" data-en="CONTACT" data-ar="تواصل">CONTACT</a>
-    </nav>
-    <div class="header-actions">
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">عربي</button>
-      <a class="menu-contact" href="#contact" data-en="LET'S TALK ↗" data-ar="لنتحدث ↗">LET'S TALK ↗</a>
-      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
-    </div>
-  </header>
+<header><nav>
+<a class="logo" href="#top" data-en="Manal Al-Razani" data-ar="منال الرزاني">منال الرزاني</a>
+<div class="links">
+<a class="hide" href="#work" data-en="Work" data-ar="أعمالي">Work</a>
+<a class="hide" href="#about" data-en="About" data-ar="عنّي">About</a>
+<a class="hide" href="#services" data-en="Services" data-ar="خدماتي">Services</a>
+<a href="#contact" data-en="Contact" data-ar="تواصلي">Contact</a>
+<button class="lang" id="lang" type="button" aria-label="Switch language">عربي</button>
+</div></nav></header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-topline"><span>INDEPENDENT CREATIVE PORTFOLIO</span><span>01 / 05</span></div>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="asterisk">✳</span> GRAPHIC DESIGNER · VISUAL STORYTELLER</p>
-          <h1>Ideas into<br><em>visual</em> impact<span class="dot">.</span></h1>
-          <p class="hero-intro" data-en="I’m Manal — a graphic designer who turns ideas into thoughtful visual experiences, meaningful identities, and memorable digital content." data-ar="أنا منال، مصممة جرافيك أحوّل الأفكار إلى تجارب بصرية مدروسة، وهويات ذات معنى، ومحتوى رقمي يترك أثراً.">I’m Manal — a graphic designer who turns ideas into thoughtful visual experiences, meaningful identities, and memorable digital content.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#work" data-en="EXPLORE MY WORK ↘" data-ar="اكتشف أعمالي ↘">EXPLORE MY WORK ↘</a>
-            <a class="text-link" href="#about" data-en="MORE ABOUT ME" data-ar="المزيد عني">MORE ABOUT ME</a>
-          </div>
-          <div class="hero-meta"><span>BASED IN PALESTINE</span><span>DESIGN · IDEAS · DETAILS</span></div>
-        </div>
-        <div class="hero-art" aria-label="Abstract creative artwork">
-          <div class="art-sticker">M<br><small>MAKE<br>IT MATTER</small></div>
-          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-          <div class="art-sun"></div><div class="art-shape shape-blue"></div><div class="art-shape shape-orange"></div>
-          <div class="art-type">CREATE<br><i>WITH</i><br>INTENT.</div>
-          <div class="art-caption">VISUAL EXPERIMENT № 001</div>
-          <div class="art-star">✳</div>
-        </div>
-      </div>
-      <div class="marquee" aria-hidden="true"><div>DESIGN WITH PURPOSE ✳ THINK IN COLOUR ✳ MAKE IT MEANINGFUL ✳ DESIGN WITH PURPOSE ✳ THINK IN COLOUR ✳ MAKE IT MEANINGFUL ✳</div></div>
-    </section>
+<main id="top">
+<div class="wrap hero">
+<div class="blob" aria-hidden="true"></div>
+<h1 data-en="Ideas into <span class='hl'>visual</span> impact." data-ar="أحوّل الأفكار إلى <span class='hl'>أثر</span> بصري.">Ideas into <span class="hl">visual</span> impact.</h1>
+<p data-en="I’m Manal, a graphic designer in Palestine. I create brand identities, social campaigns and posters with clear ideas behind them." data-ar="أنا منال، مصممة جرافيك من فلسطين. أصمّم هويات بصرية وحملات سوشيال ميديا وبوسترات تقوم على فكرة واضحة.">I’m Manal, a graphic designer in Palestine. I create brand identities, social campaigns and posters with clear ideas behind them.</p>
+<a class="btn" href="#work" data-en="See my work" data-ar="شاهدي أعمالي">See my work</a>
+<a class="btn alt" href="#contact" data-en="Start a project" data-ar="ابدأ مشروعاً">Start a project</a>
+</div>
 
-    <section class="work-section section-wrap" id="work">
-      <div class="section-heading">
-        <div><p class="eyebrow">02 — THE SELECTED WORK</p><h2>Selected <em>works</em><span class="dot">.</span></h2></div>
-        <p class="section-note" data-en="A collection of visual explorations, brand stories, and design solutions." data-ar="مجموعة من التجارب البصرية وحكايات العلامات التجارية والحلول التصميمية.">A collection of visual explorations, brand stories, and design solutions.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all" data-en="ALL PROJECTS" data-ar="كل المشاريع">ALL PROJECTS</button>
-        <button class="filter" data-filter="social" data-en="SOCIAL MEDIA" data-ar="سوشيال ميديا">SOCIAL MEDIA</button>
-        <button class="filter" data-filter="branding" data-en="BRANDING" data-ar="هويات بصرية">BRANDING</button>
-        <button class="filter" data-filter="poster" data-en="POSTERS" data-ar="بوسترات">POSTERS</button>
-      </div>
-      <div class="project-grid" id="projectGrid">
-        <article class="project-card project-large" data-category="social">
-          <div class="project-visual matcha-visual">
-            <span class="visual-label">CAMPAIGN / 01</span><span class="matcha-circle"></span><span class="matcha-leaf">✳</span>
-            <div class="matcha-word">MATCHA<br><i>MOMENT</i></div><div class="matcha-glass"><div></div></div>
-            <span class="visual-foot">A FRESH POINT OF VIEW</span>
-          </div>
-          <div class="project-info"><div><h3>Matcha Social Campaign</h3><p data-en="Art direction · Social media design" data-ar="إخراج فني · تصميم محتوى رقمي">Art direction · Social media design</p></div><span class="project-number">01</span></div>
-        </article>
-        <article class="project-card" data-category="branding">
-          <div class="project-visual identity-visual">
-            <span class="visual-label">IDENTITY / 02</span><div class="identity-sun">G</div><div class="identity-name">GIFT<br><em>ROSE</em></div><div class="identity-line"></div><span class="identity-sub">A LITTLE JOY, BEAUTIFULLY WRAPPED.</span>
-          </div>
-          <div class="project-info"><div><h3>Gift Rose Identity</h3><p data-en="Brand identity · Logo design" data-ar="هوية بصرية · تصميم شعار">Brand identity · Logo design</p></div><span class="project-number">02</span></div>
-        </article>
-        <article class="project-card" data-category="poster">
-          <div class="project-visual cake-visual">
-            <span class="visual-label">POSTER / 03</span><div class="cake-title">A SLICE<br><i>OF HEAVEN</i></div><div class="cake-plate"></div><div class="cake-piece"><div class="cake-icing"></div></div><span class="cake-note">SWEET MOMENTS, MADE TO SHARE.</span>
-          </div>
-          <div class="project-info"><div><h3>A Slice of Heaven</h3><p data-en="Poster design · Typography" data-ar="تصميم بوستر · معالجة طباعية">Poster design · Typography</p></div><span class="project-number">03</span></div>
-        </article>
-        <article class="project-card project-large" data-category="social">
-          <div class="project-visual visual-type">
-            <span class="visual-label">DIGITAL / 04</span><div class="type-big">MAKE<br><em>SPACE</em><br>FOR<br>GOOD.</div><div class="type-circle"></div><div class="type-small">A VISUAL STUDY IN BALANCE / 2026</div>
-          </div>
-          <div class="project-info"><div><h3>Visual Stories</h3><p data-en="Social media · Campaign concepts" data-ar="سوشيال ميديا · أفكار حملات">Social media · Campaign concepts</p></div><span class="project-number">04</span></div>
-        </article>
-      </div>
-      <p class="portfolio-note"><span>✳</span> <span data-en="Preview concepts are included as layout placeholders. Replace them with your original project images before publishing." data-ar="المعاينات الحالية نماذج مؤقتة للتخطيط. استبدليها بصور أعمالك الأصلية قبل نشر الموقع.">Preview concepts are included as layout placeholders. Replace them with your original project images before publishing.</span></p>
-    </section>
+<section id="work"><div class="wrap">
+<h2 data-en="Selected work" data-ar="أعمال مختارة">Selected work</h2>
+<p class="sub" data-en="Four projects across social media, branding and posters." data-ar="أربعة مشاريع في السوشيال ميديا والهوية البصرية والبوسترات.">Four projects across social media, branding and posters.</p>
+<div class="grid">
+<article class="tile t1"><div class="big" data-en="Matcha<br>Moment" data-ar="لحظة<br>ماتشا">Matcha<br>Moment</div><div><h3 data-en="Matcha Social Campaign" data-ar="حملة ماتشا على السوشيال ميديا">Matcha Social Campaign</h3><small data-en="Art direction, social media design" data-ar="إخراج فني، تصميم سوشيال ميديا">Art direction, social media design</small></div></article>
+<article class="tile t2"><div class="big" data-en="Gift<br>Rose" data-ar="هدية<br>وردة">Gift<br>Rose</div><div class="rose" aria-hidden="true"></div><div><h3 data-en="Gift Rose Identity" data-ar="هوية Gift Rose">Gift Rose Identity</h3><small data-en="Brand identity, logo design" data-ar="هوية بصرية، تصميم شعار">Brand identity, logo design</small></div></article>
+<article class="tile t3"><div class="big" data-en="A Slice<br>of Heaven" data-ar="قطعة<br>من الجنة">A Slice<br>of Heaven</div><div class="slice" aria-hidden="true"></div><div><h3 data-en="A Slice of Heaven" data-ar="قطعة من الجنة">A Slice of Heaven</h3><small data-en="Poster design, typography" data-ar="تصميم بوستر، تايبوغرافي">Poster design, typography</small></div></article>
+<article class="tile t4"><div class="big" data-en="Make space<br>for good." data-ar="افسحي<br>مكاناً للخير.">Make space<br>for good.</div><div class="ring" aria-hidden="true"></div><div><h3 data-en="Visual Stories" data-ar="قصص بصرية">Visual Stories</h3><small data-en="Social media, campaign concepts" data-ar="سوشيال ميديا، أفكار حملات">Social media, campaign concepts</small></div></article>
+</div></div></section>
 
-    <section class="about-section" id="about">
-      <div class="section-wrap about-grid">
-        <div class="about-side"><p class="eyebrow">03 — A LITTLE ABOUT ME</p><div class="about-symbol">M<span>✳</span></div><p class="side-note">CURIOUS BY NATURE.<br>CREATIVE BY CHOICE.</p></div>
-        <div class="about-main"><h2>Designing with<br><em>meaning</em> in mind<span class="dot">.</span></h2>
-          <p class="about-text" data-en="I’m Manal Al-Razani, a graphic designer with a background in interior design. I enjoy building visual identities, creating digital campaigns, and exploring the relationship between colour, typography, and space. My approach combines curiosity, clear thinking, and attention to detail." data-ar="أنا منال الرزاني، مصممة جرافيك وخلفيتي الأكاديمية في التصميم الداخلي. أستمتع ببناء الهويات البصرية، وتصميم الحملات الرقمية، واستكشاف العلاقة بين اللون والخط والمساحة. يجمع أسلوبي بين الفضول والتفكير الواضح والاهتمام بالتفاصيل.">I’m Manal Al-Razani, a graphic designer with a background in interior design. I enjoy building visual identities, creating digital campaigns, and exploring the relationship between colour, typography, and space. My approach combines curiosity, clear thinking, and attention to detail.</p>
-          <a class="text-link dark-link" href="#contact" data-en="LET'S CREATE SOMETHING ↗" data-ar="لنصنع شيئاً معاً ↗">LET'S CREATE SOMETHING ↗</a>
-        </div>
-      </div>
-    </section>
+<section id="about"><div class="wrap about">
+<h2 data-en="Design with meaning in mind." data-ar="تصميم يحمل معنى.">Design with meaning in mind.</h2>
+<div>
+<p data-en="I’m a graphic designer with a background in interior design. That training taught me to think about colour, type and space together, the same way you plan a room." data-ar="أنا مصممة جرافيك بخلفية في التصميم الداخلي. هذه الخلفية علّمتني التفكير في اللون والخط والمساحة معاً، كما نخطط غرفة كاملة.">I’m a graphic designer with a background in interior design. That training taught me to think about colour, type and space together, the same way you plan a room.</p>
+<p data-en="I work from curiosity and clear thinking, and I care about the small details that make a design feel finished." data-ar="أعمل بفضول وتفكير واضح، وأهتم بالتفاصيل الصغيرة التي تجعل التصميم مكتملاً.">I work from curiosity and clear thinking, and I care about the small details that make a design feel finished.</p>
+<div class="tools" aria-label="Tools"><span>Photoshop</span><span>Illustrator</span><span>SketchUp</span><span>V-Ray</span><span data-en="Typography" data-ar="تايبوغرافي">Typography</span><span data-en="Art direction" data-ar="إخراج فني">Art direction</span></div>
+</div></div></section>
 
-    <section class="services-section section-wrap" id="services">
-      <div class="section-heading"><div><p class="eyebrow">04 — WHAT I CAN DO</p><h2>Creative <em>services</em><span class="dot">.</span></h2></div><p class="section-note" data-en="Thoughtful design support, from the first idea to the final visual." data-ar="حلول تصميمية مدروسة، من الفكرة الأولى حتى الشكل النهائي.">Thoughtful design support, from the first idea to the final visual.</p></div>
-      <div class="service-list">
-        <div class="service-row"><span class="service-no">01</span><h3>Brand Identity & Logo Design</h3><span class="service-ar">هويات بصرية وتصميم شعارات</span><span class="service-arrow">↗</span></div>
-        <div class="service-row"><span class="service-no">02</span><h3>Social Media Design</h3><span class="service-ar">تصميم محتوى السوشيال ميديا</span><span class="service-arrow">↗</span></div>
-        <div class="service-row"><span class="service-no">03</span><h3>Advertising & Campaign Design</h3><span class="service-ar">تصميم الإعلانات والحملات</span><span class="service-arrow">↗</span></div>
-        <div class="service-row"><span class="service-no">04</span><h3>Posters & Visual Communication</h3><span class="service-ar">البوسترات والتواصل البصري</span><span class="service-arrow">↗</span></div>
-      </div>
-    </section>
+<section id="services"><div class="wrap">
+<h2 data-en="Services" data-ar="الخدمات">Services</h2>
+<p class="sub" data-en="From the first idea to the final file." data-ar="من الفكرة الأولى حتى الملف النهائي.">From the first idea to the final file.</p>
+<ul class="svc">
+<li><div data-en="Brand identity and logo design" data-ar="هويات بصرية وتصميم شعارات">Brand identity and logo design</div><span data-en="Logos, colour, type, guidelines" data-ar="شعارات، ألوان، خطوط، دليل استخدام">Logos, colour, type, guidelines</span></li>
+<li><div data-en="Social media design" data-ar="تصميم محتوى السوشيال ميديا">Social media design</div><span data-en="Posts, stories, templates" data-ar="منشورات، ستوري، قوالب">Posts, stories, templates</span></li>
+<li><div data-en="Advertising and campaigns" data-ar="تصميم الإعلانات والحملات">Advertising and campaigns</div><span data-en="Concepts and key visuals" data-ar="أفكار وتصاميم رئيسية">Concepts and key visuals</span></li>
+<li><div data-en="Posters and visual communication" data-ar="البوسترات والتواصل البصري">Posters and visual communication</div><span data-en="Print and digital" data-ar="مطبوع ورقمي">Print and digital</span></li>
+</ul></div></section>
 
-    <section class="skills-section">
-      <div class="section-wrap skills-grid"><div><p class="eyebrow">05 — MY TOOLKIT</p><h2>Tools for<br><em>ideas.</em></h2></div><div class="skill-cloud"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Visual Identity</span><span>Art Direction</span><span>Social Media Design</span><span>Typography</span><span>SketchUp</span><span>3D Visualization</span><span>V-Ray</span></div></div>
-    </section>
+<section id="contact"><div class="wrap"><div class="contact">
+<h2 data-en="Have a project in mind?" data-ar="عندك مشروع؟">Have a project in mind?</h2>
+<p data-en="Tell me about your idea, collaboration or opportunity." data-ar="احكي لي عن فكرتك أو تعاونك أو فرصتك.">Tell me about your idea, collaboration or opportunity.</p>
+<a class="btn" href="mailto:hello@example.com" data-en="Email me" data-ar="راسليني">Email me</a>
+<div class="social"><a href="#">Behance</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+</div></div></section>
+</main>
 
-    <section class="contact-section section-wrap" id="contact">
-      <p class="eyebrow">06 — HAVE A PROJECT IN MIND?</p><h2>Let's make<br>something <em>great.</em></h2>
-      <div class="contact-bottom"><p data-en="Have an idea, a collaboration, or an opportunity? I’d love to hear from you." data-ar="لديك فكرة أو فرصة تعاون أو عمل؟ يسعدني أن أسمع منك.">Have an idea, a collaboration, or an opportunity? I’d love to hear from you.</p><a class="contact-email" href="mailto:hello@example.com">LET'S TALK ↗</a></div>
-      <div class="social-links"><a href="#" target="_blank" rel="noreferrer">BEHANCE ↗</a><a href="#" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="#" target="_blank" rel="noreferrer">INSTAGRAM ↗</a><span>PALESTINE · 2026</span></div>
-    </section>
-  </main>
-  <footer class="footer"><a class="brand" href="#home">MANAL<span>®</span></a><span>DESIGNED WITH INTENTION © 2026</span><a href="#home">BACK TO TOP ↑</a></footer>
-  <script src="script.js"></script>
+<div class="wrap"><footer><span data-en="© 2026 Manal Al-Razani" data-ar="© 2026 منال الرزاني">© 2026 منال الرزاني</span><span data-en="Palestine" data-ar="فلسطين">Palestine</span></footer></div>
+
+<script>
+(function(){
+var btn=document.getElementById('lang'),ar=false;
+btn.addEventListener('click',function(){
+ar=!ar;
+var h=document.documentElement;
+h.lang=ar?'ar':'en';h.dir=ar?'rtl':'ltr';
+btn.textContent=ar?'English':'عربي';
+document.querySelectorAll('[data-en]').forEach(function(el){el.innerHTML=el.getAttribute(ar?'data-ar':'data-en')});
+});
+btn.click();
+})();
+</script>
 </body>
 </html>
